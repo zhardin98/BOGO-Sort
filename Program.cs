@@ -25,10 +25,10 @@ namespace BOGO_Sort
                 }
                 arr[i] = num;
             }
-            fuckingSort(ref arr);
+            Sort(ref arr);
         }
 
-        private static void fuckingSort(ref int[] arr)
+        private static void Sort(ref int[] arr)
         {
             while (!sorted(arr))
             {
