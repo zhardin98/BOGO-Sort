@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Diagnostics;
+using System.Threading;
 
 namespace BOGO_Sort
 {
@@ -19,13 +21,17 @@ namespace BOGO_Sort
             {
                 bool ret = int.TryParse(numbers[i].Trim(), out num);
                 if (!ret)
-                { //Isn't a number, unable to parse it, so then it just skips it
+                {
                     Console.WriteLine("[ERROR] Can not parse: " + numbers[i] + " Skipping...");
                     continue;
                 }
                 arr[i] = num;
             }
+            Stopwatch stopWatch = new Stopwatch();
+            stopWatch.Start();
             Sort(ref arr);
+            stopWatch.Stop();
+            Console.WriteLine(stopWatch.Elapsed.ToString());
         }
 
         private static void Sort(ref int[] arr)
