@@ -54,7 +54,6 @@ namespace BOGO_Sort
                     Console.Write("[" + arr[v] + "] ");
                 }
                 Console.WriteLine();
-                Console.Beep(rdm.Next(440, 880), 200);
             }
         }
 
